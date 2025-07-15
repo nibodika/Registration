@@ -1,0 +1,472 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Marriage Registration Form</title>
+
+  <style>
+body {
+        font-family: 'Times New Roman', Times, serif;
+        background-color:rgb(185, 210, 202);
+        margin: 0;
+        padding: 0;
+      }
+
+      body, h1, ul, li, form {
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    font-size: 18px;
+}
+      .container1 {
+    width: 80%;
+    margin: 0 auto;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    
+}
+.menu-text{
+    font-size: 38px;
+    color:rgb(167, 31, 31) ;
+}
+
+header {
+    background-color: white;
+    color:black;
+    padding: 30px 0;
+}
+
+.logo img {
+    max-width: 200%; /* Make sure the logo fits within the container */
+   height: auto; /* Preserve the aspect ratio */
+}
+
+.logo1 {
+    display: inline-block;
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+.logo1:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+li{
+    font-size: 18px;
+}
+
+.menu-box li {
+    margin-right: 40px; /* Adjust as needed */
+}
+
+.menu-box li:last-child {
+    margin-right: 0;
+}
+
+.menu-box li a {
+    text-decoration: none;
+    color: black;
+
+}
+
+.menu-box li a:hover {
+    color:purple;
+}
+
+      .container {
+        max-width: 600px;
+        margin: 50px auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-weight: bold;
+        background-color: rgb(124, 148, 162);
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+      
+      input[type="text"],
+      input[type="number"],
+      input[type="email"],
+      input[type="date"],
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+    .center {
+        text-align: center;
+    }
+
+    .form-group1 {
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        width: 288px;
+    }
+    
+    .name {
+        display: block;
+    }
+
+    .signature-container {
+        width: 276px;
+        height: 130px;
+        border: 1px solid black;
+        position: relative;
+        display: inline-block;
+        margin-right: 20px; /* Add some space between signature boxes */
+    }
+    .signature-input {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .signature-canvas {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    input[type="submit"] {
+        background-color:rebeccapurple; 
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
+      }
+      input[type="submit"]:hover {
+        background-color: rebeccapurple;
+      }
+
+   h2{
+    background-color:  rgb(26, 95, 127);
+   }
+
+    hr {
+        border: none;
+        border-top: 1.5px solid black; /* Set border-top to create a horizontal line with black color */
+    }
+
+    label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+label[for="agree"] {
+  display: inline;
+}
+
+footer {
+    background-color: white;
+    color:black;
+    padding: 30px 0;
+    text-align: center;
+}
+
+</style>
+
+</head>
+<body>
+    <header>
+        <div class="container1">
+            <div class="logo">
+                <img src="government.png" alt="Logo">
+            </div>
+            <p class="menu-text">Gadhawa Municipality System</p>
+            
+            <nav> 
+                <ul class="menu-box">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<div class="container">
+<div><h2 class="center">Marriage Registration Form</h2></div>
+<hr><br> 
+
+<form name="marriageForm" action="submit-marriage-registration.php" method="POST" onsubmit="return validateForm()">
+
+ <div class="form-group1">
+  <label for="husbandfn" class="name">Husband's First Name:</label>
+  <input type="text" id="husbandfn" name="husbandfn" required>
+ </div>
+
+ <div class="form-group1">
+  <label for="husbandln" class="name">Husband's Last Name:</label>
+  <input type="text" id="husbandln" name="husbandln" required>
+ </div>
+
+ <div class="form-group">
+  <label for="husbandDOB">Husband's Date of Birth:</label>
+  <input type="date" id="husbandDOB" name="husbandDOB" required>
+ </div
+ >
+ <div class="form-group">
+  <label for="husbandEmail">Husband's Email:</label>
+  <input type="email" id="husbandEmail" name="husbandEmail" required>
+ </div>
+
+ <div class="form-group">
+  <label for="husbandPhone">Husband's Phone Number:</label>
+  <input type="number" id="husbandPhone" name="husbandPhone" required>
+ </div>
+
+ <div class="form-group">
+  <label for="husbandaddress">Husband's Address:</label>
+  <input type="text" id="husbandaddress" name="husbandaddress" required>
+ </div>
+
+ <div class="form-group1">
+  <label for="wifefn" class="name">Wife's First Name:</label>
+  <input type="text" id="wifefn" name="wifefn" required>
+ </div>
+
+ <div class="form-group1">
+  <label for="wifeln" class="name">Wife's Last Name:</label>
+  <input type="text" id="wifeln" name="wifeln" required>
+ </div>
+
+ <div class="form-group">
+  <label for="wifeDOB">Wife's Date of Birth:</label>
+  <input type="date" id="wifeDOB" name="wifeDOB" required>
+ </div>
+
+  <div class="form-group">
+  <label for="wifeEmail">Wife's Email:</label>
+  <input type="email" id="wifeEmail" name="wifeEmail" required>
+  </div>
+
+<div class="form-group">
+  <label for="wifePhone">Wife's Phone Number:</label>
+  <input type="number" id="wifePhone" name="wifePhone" required>
+</div>
+
+<div class="form-group">
+  <label for="wifeaddress">Wife's Address:</label>
+  <input type="text" id="wifeaddress" name="wifeaddress" required>
+</div>
+
+  <div class="form-group">
+  <label for="marriageDate">Marriage Date:</label>
+  <input type="date" id="marriageDate" name="marriageDate" required>
+  </div>
+
+  <div class="form-group">
+  <label for="location">Location of Marriage:</label>
+  <input type="text" id="location" name="location" required>
+  </div>
+  
+  <div class="form-group">
+  <label for="witness1">Witness 1 Full Name:</label>
+  <input type="text" id="witness1" name="witness1" required>
+  </div>
+
+  <div class="form-group">
+  <label for="witness2">Witness 2 Full Name:</label>
+  <input type="text" id="witness2" name="witness2" required>
+  </div>
+
+  <input type="checkbox" id="agree" name="agree">
+  <label for="agree">I agree with <a href="condition1.html">terms and conditions</a></label><br><br>
+
+  <label for="Date">Submission Date:</label>
+  <input type="date" id="date" name="submission_date" required><br><br>
+    
+  <div style="display: inline-block; vertical-align: top;">
+    <label for="signature1">Husband Signature:</label>
+    <div class="signature-container">
+        <input type="file" id="signature1" class="signature-input" accept="image/*" capture="user">
+        <canvas class="signature-canvas"></canvas>
+    </div>
+</div>
+
+<div style="display: inline-block; vertical-align: top;">
+    <label for="signature2">Wife Signature:</label>
+    <div class="signature-container">
+        <input type="file" id="signature2" class="signature-input" accept="image/*" capture="user">
+        <canvas class="signature-canvas"></canvas>
+    </div>
+</div>
+
+<br><br>
+<div class="form-group">
+    <input type="submit" value="Submit">
+  </div>
+</form>
+</div>
+
+<footer>
+    <div class="container1">
+        <p>&copy; 2024 Registration System of Gadhawa Municipality. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+function validateForm() 
+{
+  var husbandfirstName = document.getElementById("husbandfn").value;
+  var husbandlastName = document.getElementById("husbandln").value;
+  var namePattern = /^[a-zA-Z]+$/;
+  if (!namePattern.test(husbandfirstName)) {
+      alert("Please enter a valid first name (alphabets only");
+      return false;
+  }
+  if (!namePattern.test(husbandlastName)) {
+      alert("Please enter a valid last name (alphabets only)");
+      return false;
+  }
+  var wifefirstName = document.getElementById("wifefn").value;
+  var wifelastName = document.getElementById("wifeln").value;
+  if (!namePattern.test(wifefirstName)) {
+      alert("Please enter a valid first name (alphabets only)");
+      return false;
+  }
+  if (!namePattern.test(wifelastName)) {
+      alert("Please enter a valid last name (alphabets only)");
+      return false;
+  }
+  
+  var husbandemail = document.getElementById("husbandEmail").value;
+  var wifeemail = document.getElementById("wifeEmail").value;
+  var emailPattern = /\S+@\S+\.\S+/;
+  
+  if (!emailPattern.test(husbandemail)) {
+      alert("Please enter a valid email address");
+      return false;
+  }
+  if (!emailPattern.test(wifeemail)) {
+      alert("Please enter a valid email address");
+      return false;
+  }
+
+  var HusbandDOB = document.getElementById("husbandDOB").value;
+  var Husbandaddress = document.getElementById("husbandaddress").value;
+  var HusbandPhone = document.getElementById("husbandPhone").value;
+  var WifeDOB = document.getElementById("wifeDOB").value;
+  var Wifeaddress = document.getElementById("wifeaddress").value;
+  var WifePhone = document.getElementById("wifePhone").value;
+
+  // Removed dobPattern regex checks for date inputs, just check non-empty:
+  if (HusbandDOB === "") {
+      alert("Please select husband's date of birth");
+      return false;
+  }
+
+  if (Husbandaddress.trim() === "") {
+      alert("Please enter your address");
+      return false;
+  }
+
+  var phonePattern = /^\d{10}$/;
+  if (!phonePattern.test(HusbandPhone)) {
+      alert("Please enter a valid 10-digit phone number");
+      return false;
+  }
+
+  if (WifeDOB === "") {
+      alert("Please select wife's date of birth");
+      return false;
+  }
+
+  if (Wifeaddress.trim() === "") {
+      alert("Please enter your address");
+      return false;
+  }
+
+  if (!phonePattern.test(WifePhone)) {
+      alert("Please enter a valid 10-digit phone number");
+      return false;
+  }
+
+  var marriageDate = document.getElementById("marriageDate").value;
+  var Location = document.getElementById("location").value;
+  var witness1FullName = document.getElementById("witness1").value;
+  var witness2FullName = document.getElementById("witness2").value;
+  var submissionDate = document.getElementById("submission_date").value;
+
+  // Remove datePattern regex; just check non-empty
+  if (marriageDate === "") {
+      alert("Please select marriage date");
+      return false;
+  }
+
+  if (Location.trim() === "") {
+      alert("Please enter the location of marriage");
+      return false;
+  }
+
+  var namePatternSpaces = /^[a-zA-Z\s]+$/; // allow spaces for witness names
+
+  if (!namePatternSpaces.test(witness1FullName)) {
+      alert("Please enter a valid full name for witness 1 (alphabets only)");
+      return false;
+  }
+
+  if (!namePatternSpaces.test(witness2FullName)) {
+      alert("Please enter a valid full name for witness 2 (alphabets only)");
+      return false;
+  }
+
+  if (submissionDate === "") {
+      alert("Please select submission date");
+      return false;
+  }
+
+  var termsCheckbox = document.getElementById("agree");
+
+  if (!termsCheckbox.checked) {
+     alert("Please accept the terms and conditions");
+     return false;
+  }   
+
+  var signature1 = document.getElementById("signature1").value;
+  var signature2 = document.getElementById("signature2").value;
+
+  if (!signature1 || !signature2) {
+      alert("Please provide both husband and wife signatures.");
+      return false;
+  }
+  return true;
+}
+</script>
+
+</body>
+</html>
+
+

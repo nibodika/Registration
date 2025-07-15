@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Migration Registration Form</title>
+  <style>
+body {
+        font-family: 'Times New Roman', Times, serif;
+        background-color:rgb(185, 210, 202);
+        margin: 0;
+        padding: 0;
+      }
+
+      body, h1, ul, li, form {
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    font-size: 18px;
+}
+      .container1 {
+    width: 80%;
+    margin: 0 auto;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    
+}
+.menu-text{
+    font-size: 38px;
+    color:rgb(167, 31, 31) ;
+}
+
+header {
+    background-color: white;
+    color:black;
+    padding: 30px 0;
+}
+
+.logo img {
+    max-width: 200%; /* Make sure the logo fits within the container */
+   height: auto; /* Preserve the aspect ratio */
+}
+
+.logo1 {
+    display: inline-block;
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+.logo1:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+li{
+    font-size: 18px;
+}
+
+.menu-box li {
+    margin-right: 40px; /* Adjust as needed */
+}
+
+.menu-box li:last-child {
+    margin-right: 0;
+}
+
+.menu-box li a {
+    text-decoration: none;
+    color: black;
+
+}
+
+.menu-box li a:hover {
+    color:purple;
+}
+    .container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    background-color: rgb(124, 148, 162);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+        background-color:rebeccapurple; 
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
+      }
+      input[type="submit"]:hover {
+        background-color: rebeccapurple;
+      }
+
+textarea {
+  resize: vertical;
+}
+
+hr {
+        border: none;
+        border-top: 1.5px solid black; /* Set border-top to create a horizontal line with black color */
+    }
+
+    h2{
+    background-color: rgb(26, 95, 127);
+    text-align:center ;
+   }
+
+   label[for="agree"] {
+  display: inline;
+}
+
+footer {
+    background-color: white;
+    color:black;
+    padding: 30px 0;
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+
+  <header>
+    <div class="container1">
+        <div class="logo">
+            <img src="government.png" alt="Logo">
+        </div>
+        <p class="menu-text">Gadhawa Municipality System</p>
+        
+        <nav> 
+            <ul class="menu-box">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <div class="container">
+ <div><h2>Migration Registration Form</h2></div>
+<hr><br> 
+<form name="migrationForm" action="submit-migration-registration.php" method="POST" onsubmit="return validateForm()">
+    <div class="form-group">
+  <label for="fullName">Full Name:</label>
+  <input type="text" id="fullName" name="fullName" required>
+    </div>
+  
+    <div class="form-group">
+  <label for="dob">Date of Birth:</label>
+  <input type="date" id="dob" name="dob" required>
+    </div>
+
+    <div class="form-group">
+  <label for="gender">Gender:</label>
+  <select id="gender" name="gender" required>
+    <option value="male">Select gender</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="other">Other</option>
+  </select>
+    </div>
+  
+    <div class="form-group">
+  <label for="nationality">Nationality:</label>
+  <input type="text" id="nationality" name="nationality" required>
+    </div>
+  
+    <div class="form-group">
+  <label for="currentAddress">Current Address:</label>
+  <textarea id="currentAddress" name="currentAddress" rows="4" cols="50" required></textarea>
+    </div>
+  
+    <div class="form-group">
+  <label for="destinationAddress">Destination Address:</label>
+  <textarea id="destinationAddress" name="destinationAddress" rows="4" cols="50" required></textarea>
+    </div>
+  
+    <div class="form-group">
+  <label for="reasonForMigration">Reason for Migration:</label>
+  <textarea id="reasonForMigration" name="reasonForMigration" rows="4" cols="50" required></textarea>
+    </div>
+
+    <input type="checkbox" id="agree" name="agree">
+  <label for="agree">I agree with <a href="condition2.html">terms and conditions</a></label><br><br>
+
+  <label for="Date">Submission Date:</label>
+  <input type="date" id="date" name="submission_date" required><br><br>
+  
+    <div class="form-group">
+  <input type="submit" value="Submit">
+    </div>
+</form>
+    </div>
+
+    <footer>
+      <div class="container1">
+          <p>&copy; 2024 Registration System of Gadhawa Municipality. All rights reserved.</p>
+      </div>
+  </footer>
+
+    <script>
+        function validateForm() {
+            var fullName = document.forms["migrationForm"]["fullName"].value;
+            var dob = document.forms["migrationForm"]["dob"].value;
+            var gender = document.forms["migrationForm"]["gender"].value;
+            var nationality = document.forms["migrationForm"]["nationality"].value;
+            var currentAddress = document.forms["migrationForm"]["currentAddress"].value;
+            var destinationAddress = document.forms["migrationForm"]["destinationAddress"].value;
+            var reasonForMigration = document.forms["migrationForm"]["reasonForMigration"].value;
+            var agreeChecked = document.getElementById("agree").checked;
+            var submissionDate = document.forms["migrationForm"]["submission_date"].value;
+    
+            // Check if any field is empty
+            if (fullName == "" || dob == "" || gender == "" || nationality == "" || currentAddress == "" || destinationAddress == "" || reasonForMigration == "" || submissionDate == "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+    
+            // Check if agree checkbox is checked
+            if (!agreeChecked) {
+                alert("Please agree to the terms and conditions");
+                return false;
+            }
+    
+            return true;
+        }
+    </script>
+</body>
+</html>

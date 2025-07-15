@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Registration</title>
+    <style>
+body, h1, ul, li, form {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-size: cover;
+}
+
+h1{
+    font-size: 30px;
+    color:brown;
+}
+.x{
+    text-align: justify;
+    line-height: 2; /* Adjust as needed */
+    text-decoration-line: none ;
+    font-size: 18px;
+    
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    
+}
+.menu-text{
+    font-size: 38px;
+    color:rgb(167, 31, 31) ;
+}
+
+header {
+    background-color: white;
+    color:black;
+    padding: 30px 0;
+}
+
+.logo img {
+    max-width: 200%; /* Make sure the logo fits within the container */
+   height: auto; /* Preserve the aspect ratio */
+}
+
+.logo1 {
+    display: inline-block;
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+.logo1:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+li{
+    font-size: 18px;
+}
+.menu-box li {
+    margin-right: 40px; /* Adjust as needed */
+}
+
+.menu-box li:last-child {
+    margin-right: 0;
+}
+
+.menu-box li a {
+    text-decoration: none;
+    color: black;
+
+}
+
+.menu-box li a:hover {
+    color:purple;
+}
+
+
+.hero {
+    background-color: rgb(185, 210, 202);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.container0 {
+    display: flex;
+}
+
+.images {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.images img {
+    width: 50%; /* Set image width to cover half of the container */
+    height: auto;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.x {
+    max-width: 100%; /* Make sure paragraph doesn't overflow */
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.container1{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the start of the container */
+    margin-top: 40px;
+    padding: 0 100px;
+  }
+  
+  .colorful-box {
+    width: calc(42% - 20px); /* 50% width minus margin */
+    height: 550px;
+    background-color: #f0f0f0; /* Default background color */
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 10px;
+  }
+  
+  .colorful-box-content {
+    padding: 20px;
+  }
+  
+  .colorful-box-link {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: #fff;
+    background-color: #672828; /* Blue color for the link */
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  /* Different colors for different boxes */
+  #box1 {
+    background-color: #ba6414; /* Tomato */
+    background-image: url('download3.jpg');
+  }
+  
+  #box2 {
+    background-color: #046e3063; /* Yellow */
+    background-image: url('download2.jpg');
+  }
+
+  .arrow {
+    position: relative;
+    width: 40px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 250px;
+}
+
+.arrow::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid #204368;
+}
+
+.arrow::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #204368;
+}
+  
+footer {
+    background-color: white;
+    color:black;
+    padding: 30px 0;
+    text-align: center;
+}
+.y{
+    background-color:  rgb(185, 210, 202);
+}
+
+p1{
+    font-size: 18px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input[type="text"] {
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    margin-right: 4px;
+}
+
+.search-button {
+    background-color: #4CAF50;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 8px 12px;
+}
+
+.search-button:hover {
+    background-color: #45a049;
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="government.png" alt="Logo">
+            </div>
+            <p class="menu-text">Gadhawa Municipality System</p>
+            
+            <nav> 
+                <ul class="menu-box">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <form class="search-form" action="search.php" method="GET">
+                            <input type="text" name="query" placeholder="Search...">
+                            <button type="submit" class="search-button">&#128269;</button>
+                        </form>
+                    </li>
+                    <li><a href="marriage.html">&#128146; Marriage Registration</a></li>
+                    <li><a href="migration.html">&#128204; Migration Registration</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container0">
+            <div class="images">
+                <img src="download1.jpg" alt="Image 1">
+                <img src="download4.jpg" alt="Image 2">
+            </div>
+            <div class="content">
+                <h1>Online Vital Registration and Management System</h1>
+            <p class="x">The Online Vital Marriage and Migration Registration and Management System for Gadhawa Municipality is a comprehensive web-based platform 
+                designed to streamline and manage the registration processes related to marriages and migrations within a Gadhawa municipality suitated in dang district.
+                This system offers a range of functionalities to facilitate efficient and transparent registration procedures, ensuring compliance
+                with legal requirements and enhancing citizen services. Citizens can register on the platform to access various services related to marriage and migration
+                 registration. User authentication ensures data security and privacy. The system allows couples to submit their marriage registration applications online. 
+                 They can fill out required forms, upload necessary documents such as identification proofs and marriage certificates, and schedule appointments for verification.
+                 Individuals or families planning to migrate into or out of the Gadhawa municipality can use the system to register their migration details. This includes providing
+                  personal information, current and destination addresses, reasons for migration, and relevant documentation.The platform facilitates the digital storage and 
+                  management of documents related to marriage and migration registrations. Officials can access and verify documents online, reducing paperwork and manual processes.
+                  It provides a convenient, efficient, and transparent platform for citizens to register vital events such as marriages and migrations, while enabling Gadhawa 
+                  municipality authorities to effectively manage and monitor these processes.</p>
+            </div>
+        </div> 
+
+    <div class="container1">
+        <div id="box1" class="colorful-box">
+          <div class="colorful-box-content">
+            <a href="marriage.html" class="colorful-box-link"> Click For Marriage Form</a>
+          </div>
+        </div>
+        <div class="arrow-container">
+            <div class="arrow">
+            </div>
+        </div>
+        <div id="box2" class="colorful-box">
+          <div class="colorful-box-content">
+            <a href="migration.html" class="colorful-box-link">Click for Migration Form</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="y">
+    <section id="about">
+        <h2>About Us</h2>
+        <p>  Our Online vital marriage and migration registration services for Gadhawa municipality offer streamlined processes for couples to
+             formalize their union and facilitate migration procedures, ensuring convenience and efficiency.</p>
+    </section>
+
+    <section id="services">
+        <h2>Services</h2>
+        <ol>
+            <li>To simplify the vital registration process for residents.</li>
+            <li>To maintain accurate and up-to-date vital records.</li>
+            <li>To provide accessible and transparent vital registration services to all members of the community.</li>
+            <li>Secure and confidential handling of personal data.</li>
+            <li>Dedicated customer support to assist with any inquiries or issues.</li>
+        </ol>
+    </section>
+
+    <section id="how-it-works">
+        <h2>How It Works</h2>
+        <ol>
+            <li>Choose the service you need.</li>
+            <li>Fill out the online form.</li>
+            <li>Submit required documents.</li>
+            <li>Wait for confirmation.</li>
+        </ol>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email:info@gadhawamunicipality.com<br>
+        Phone: 0814-559-221</p>
+    </section>
+</section>
+    <footer>
+        <div class="container">
+            <p class="p1">&copy; 2024 Registration System of Gadhawa Municipality. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("searchForm").addEventListener("submit", function(event)
+        {
+            event.preventDefault(); // Prevent the default form submission
+            
+            var query = document.getElementById("searchInput").value.toLowerCase(); // Get the search query and convert to lowercase
+            
+            if (query === "marriage")
+            {
+                window.location.href = "marriage.html"; // Redirect to marriage.html if the query matches "marriage"
+            } 
+            else 
+            {
+                // Handle other search queries here
+                // You can redirect to a different page or show a message
+                alert("No results found for " + query);
+            }
+        });
+    </script>
+
+</body>
+</html>
