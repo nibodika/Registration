@@ -19,5 +19,5 @@ This is a simple web-based registration system built with HTML, PHP, and MySQL. 
 - Git & GitHub
 
 <p>
-<img width="1507" height="925" alt="Registration" src="https://github.com/user-attachments/assets/8b91e380-febb-4fe4-81b6-dbc9001d1ea2" />
+<img width="1507" height="902" alt="Registration" src="https://github.com/user-attachments/assets/704893d1-6fdb-415e-8ac7-c20d6b2efd36" />
 </p>
