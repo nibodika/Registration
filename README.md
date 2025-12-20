@@ -18,6 +18,6 @@ This is a simple web-based registration system built with HTML, PHP, and MySQL. 
 - VS Code
 - Git & GitHub
 
-<p>
-<img width="500" height="500" alt="Registration" src="https://github.com/user-attachments/assets/704893d1-6fdb-415e-8ac7-c20d6b2efd36" />
+<p align = "center">
+<img width="700" height="700" alt="Registration" src="https://github.com/user-attachments/assets/704893d1-6fdb-415e-8ac7-c20d6b2efd36" />
 </p>
