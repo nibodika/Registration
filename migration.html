@@ -43,13 +43,13 @@ header {
 }
 
 .logo img {
-    max-width: 200%; /* Make sure the logo fits within the container */
-   height: auto; /* Preserve the aspect ratio */
+    max-width: 200%; 
+   height: auto; 
 }
 
 .logo1 {
     display: inline-block;
-    margin-right: 10px; /* Adjust margin as needed */
+    margin-right: 10px; 
 }
 
 .logo1:nth-child(2) {
@@ -70,7 +70,7 @@ li{
 }
 
 .menu-box li {
-    margin-right: 40px; /* Adjust as needed */
+    margin-right: 40px; 
 }
 
 .menu-box li:last-child {
@@ -138,7 +138,7 @@ textarea {
 
 hr {
         border: none;
-        border-top: 1.5px solid black; /* Set border-top to create a horizontal line with black color */
+        border-top: 1.5px solid black; 
     }
 
     h2{
@@ -164,7 +164,7 @@ footer {
   <header>
     <div class="container1">
         <div class="logo">
-            <img src="government.png" alt="Logo">
+            <img src="images/government.png" alt="Logo">
         </div>
         <p class="menu-text">Gadhawa Municipality System</p>
         
@@ -254,13 +254,11 @@ footer {
             var agreeChecked = document.getElementById("agree").checked;
             var submissionDate = document.forms["migrationForm"]["submission_date"].value;
     
-            // Check if any field is empty
             if (fullName == "" || dob == "" || gender == "" || nationality == "" || currentAddress == "" || destinationAddress == "" || reasonForMigration == "" || submissionDate == "") {
                 alert("All fields must be filled out");
                 return false;
             }
     
-            // Check if agree checkbox is checked
             if (!agreeChecked) {
                 alert("Please agree to the terms and conditions");
                 return false;

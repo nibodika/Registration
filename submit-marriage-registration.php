@@ -32,7 +32,6 @@ $witness1FullName = $_POST['witness1'];
 $witness2FullName = $_POST['witness2'];
 $submissionDate = $_POST['submission_date'];
 
-// Prepare SQL statement to insert form data into the table (replace 'marriage_table' with your actual table name)
 $sql = "INSERT INTO marriage (husband_first_name, husband_last_name, husband_dob, husband_email, husband_phone, husband_address, wife_first_name, wife_last_name, wife_dob, wife_email, wife_phone, wife_address, marriage_date, location, witness1_full_name, witness2_full_name, submission_date) 
         VALUES ('$husbandFirstName', '$husbandLastName', '$husbandDOB', '$husbandEmail', '$husbandPhone', '$husbandAddress', '$wifeFirstName', '$wifeLastName', '$wifeDOB', '$wifeEmail', '$wifePhone', '$wifeAddress', '$marriageDate', '$location', '$witness1FullName', '$witness2FullName', '$submissionDate')";
 

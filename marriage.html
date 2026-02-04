@@ -43,13 +43,13 @@ header {
 }
 
 .logo img {
-    max-width: 200%; /* Make sure the logo fits within the container */
-   height: auto; /* Preserve the aspect ratio */
+    max-width: 200%; 
+   height: auto; 
 }
 
 .logo1 {
     display: inline-block;
-    margin-right: 10px; /* Adjust margin as needed */
+    margin-right: 10px; 
 }
 
 .logo1:nth-child(2) {
@@ -70,7 +70,7 @@ li{
 }
 
 .menu-box li {
-    margin-right: 40px; /* Adjust as needed */
+    margin-right: 40px; 
 }
 
 .menu-box li:last-child {
@@ -134,7 +134,7 @@ li{
         border: 1px solid black;
         position: relative;
         display: inline-block;
-        margin-right: 20px; /* Add some space between signature boxes */
+        margin-right: 20px; 
     }
     .signature-input {
         width: 100%;
@@ -174,7 +174,7 @@ li{
 
     hr {
         border: none;
-        border-top: 1.5px solid black; /* Set border-top to create a horizontal line with black color */
+        border-top: 1.5px solid black; 
     }
 
     label {
@@ -201,7 +201,7 @@ footer {
     <header>
         <div class="container1">
             <div class="logo">
-                <img src="government.png" alt="Logo">
+                <img src="images/government.png" alt="Logo">
             </div>
             <p class="menu-text">Gadhawa Municipality System</p>
             
@@ -382,7 +382,6 @@ function validateForm()
   var Wifeaddress = document.getElementById("wifeaddress").value;
   var WifePhone = document.getElementById("wifePhone").value;
 
-  // Removed dobPattern regex checks for date inputs, just check non-empty:
   if (HusbandDOB === "") {
       alert("Please select husband's date of birth");
       return false;
@@ -420,7 +419,6 @@ function validateForm()
   var witness2FullName = document.getElementById("witness2").value;
   var submissionDate = document.getElementById("submission_date").value;
 
-  // Remove datePattern regex; just check non-empty
   if (marriageDate === "") {
       alert("Please select marriage date");
       return false;
@@ -431,7 +429,7 @@ function validateForm()
       return false;
   }
 
-  var namePatternSpaces = /^[a-zA-Z\s]+$/; // allow spaces for witness names
+  var namePatternSpaces = /^[a-zA-Z\s]+$/; 
 
   if (!namePatternSpaces.test(witness1FullName)) {
       alert("Please enter a valid full name for witness 1 (alphabets only)");
@@ -465,7 +463,6 @@ function validateForm()
   return true;
 }
 </script>
-
 </body>
 </html>
 
